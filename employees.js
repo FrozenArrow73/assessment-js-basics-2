@@ -106,8 +106,8 @@ class Manager extends Employee {
     getEmployees() {
         console.log(`${this.name} manages ${this.employees}`)
     }
-    addEmployee() {
-        
+    addEmployee(emp) {
+        this.employees.push(emp)
     }
 
 }
@@ -126,6 +126,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
+const manager = new Manager("Winston", "weekday mornings, weekday afternoons", ["Cece", "Schmidt"])
 
 
 /*
@@ -134,6 +135,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
+manager.getEmployees()
 
 /*
     Call the `addEmployee` method on the 
@@ -142,6 +144,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE 
+manager.addEmployee("Coach")
 
 /*
     Call the `getEmployees` method on the
@@ -150,3 +153,4 @@ class Manager extends Employee {
 */
 
 //CODE HERE
+manager.getEmployees()
