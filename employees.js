@@ -19,7 +19,18 @@
     stored on the object.
 */
 
-//CODE HERE
+//CODE HERE]
+class Employee {
+    constructor(name, shifts) {
+        this.name = name
+        this.shifts = shifts
+
+    }
+
+    getSchedule() {
+        console.log(`${this.name} works on ${this.shifts}`)
+    }
+}
 
 
 
@@ -34,6 +45,7 @@
 */
 
 //CODE HERE
+empOne = new Employee("Jess", "weekday mornings, weekday afternoons")
 
 /*
     Call the `getSchedule` method on the
@@ -41,6 +53,7 @@
 */
 
 //CODE HERE
+empOne.getSchedule()
 
 
 /*
@@ -56,6 +69,8 @@
 */
 
 //CODE HERE
+empTwo = {...empOne}
+empTwo.name = "Nick"
 
 
 
@@ -83,6 +98,19 @@
 */
 
 //CODE HERE
+class Manager extends Employee {
+    constructor (name, shifts, employees) {
+        super(name, shifts)
+        this.employees = employees
+    }
+    getEmployees() {
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployee() {
+        
+    }
+
+}
 
 
 
