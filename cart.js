@@ -34,8 +34,12 @@ const cart = [
 ]
 
 //CODE HERE
+const summedPrice = cart.reduce((acc, cur) => {
+    
+    return acc + cur.price
+}, 0)
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+console.log (summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,6 +58,10 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    return (cartTotal - couponValue) * (1 + tax)
+
+}
 
 
 
@@ -79,6 +87,31 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+    //name (string)
+    name of the customer so that customers can be greated by staff and can be matched
+    with phone number for identification
+    -it is a string to store the varaity of characters in a name
+
+    //account (number)
+    for storing and reterval of customers rewards account information
+    -it's a number incase it needs to be changed for any reason we can 
+    make a function to do that easily
+
+    //email (string)
+    to send out promotional emails
+    -its a string to store the varaity of characters of an email
+
+    //phoneNumber (string) 
+    for verification purposes and to call the customer when waitlist items arrive
+    -it's a string because we wont do math on a phonenumber
+
+    //creditcard (number)
+    for ease of payment and for renewal of rewards account
+    -its a number to send to payment processing
+
+    //status (boolean)
+    to show if the account is active
+    -its a boolean because the account is active or not
 
 */
 
@@ -88,3 +121,12 @@ const cart = [
 */
 
 //CODE HERE
+
+let customer = {
+    name: "Derek Wheeler",
+    account: 1234,
+    email: "123@emai.com",
+    phoneNumber: "(801) 555-5555",
+    creditCard: 1234123412341234,
+    status: true
+}
